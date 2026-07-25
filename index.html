@@ -4,42 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Registration</title>
-  <style>
-    body { font-family: Arial, Helvetica, sans-serif; margin: 24px; }
-    h1 { text-align: center; }
-    form { max-width: 520px; padding: 16px; border: 1px solid #ddd; border-radius: 8px; margin: 0 auto; }
-    .row { margin-bottom: 12px; }
-    label { display: block; margin-bottom: 6px; font-weight: 600; }
-    input[type="text"], input[type="tel"], select{
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-sizing: border-box;
-    }
-    .gender-group { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-    .gender-group label { display: inline-flex; gap: 8px; font-weight: 400; margin: 0; }
-    button {
-      padding: 10px 16px;
-      border: 0;
-      border-radius: 6px;
-      background: #2563eb;
-      color: white;
-      cursor: pointer;
-      font-weight: 700;
-    }
-    button:hover { background: #1d4ed8; }
-  </style>
 </head>
-<body>
-  <h1>Registration Form</h1>
-  <form action="success.html" method="get">
-    <div class="row">
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" placeholder="Enter your name" required />
+<body style="font-family: Arial, Helvetica, sans-serif; margin: 24px;">
+  <h1 style="text-align: center;">Registration Form</h1>
+  <form action="success.html" method="get" style="max-width: 520px; padding: 16px; border: 1px solid #ddd; border-radius: 8px; margin: 0 auto;">
+    <div class="row" style="margin-bottom: 12px;">
+      <label for="name" style="display: block; margin-bottom: 6px; font-weight: 600;">Name</label>
+      <input id="name" name="name" type="text" placeholder="Enter your name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;" />
     </div>
-    <div class="row">
-      <label for="mobile">Mobile Number</label>
+    <div class="row" style="margin-bottom: 12px;">
+      <label for="mobile" style="display: block; margin-bottom: 6px; font-weight: 600;">Mobile Number</label>
       <input
         id="mobile"
         name="mobile"
@@ -49,19 +23,20 @@
         pattern="[0-9]{10}"
         title="Enter a 10-digit mobile number"
         required
+        style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;"
       />
     </div>
-    <div class="row">
-      <label>Gender</label>
-      <div class="gender-group" role="radiogroup" aria-label="Gender">
-        <label><input type="radio" name="gender" value="Male" required /> Male</label>
-        <label><input type="radio" name="gender" value="Female" /> Female</label>
-        <label><input type="radio" name="gender" value="Other" /> Other</label>
+    <div class="row" style="margin-bottom: 12px;">
+      <label style="display: block; margin-bottom: 6px; font-weight: 600;">Gender</label>
+      <div class="gender-group" role="radiogroup" aria-label="Gender" style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+        <label style="display: inline-flex; gap: 8px; font-weight: 400; margin: 0;"><input type="radio" name="gender" value="Male" required /> Male</label>
+        <label style="display: inline-flex; gap: 8px; font-weight: 400; margin: 0;"><input type="radio" name="gender" value="Female" /> Female</label>
+        <label style="display: inline-flex; gap: 8px; font-weight: 400; margin: 0;"><input type="radio" name="gender" value="Other" /> Other</label>
       </div>
     </div>
-    <div class="row">
-      <label for="department">Department</label>
-      <select id="department" name="department" required>
+    <div class="row" style="margin-bottom: 12px;">
+      <label for="department" style="display: block; margin-bottom: 6px; font-weight: 600;">Department</label>
+      <select id="department" name="department" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;">
         <option value="" selected disabled>Select department</option>
         <option value="CSE">CSE</option>
         <option value="ECE">ECE</option>
@@ -70,7 +45,7 @@
         <option value="CIVIL">Civil</option>
       </select>
     </div>
-    <button type="submit">Registration</button>
+    <button type="submit" style="padding: 10px 16px; border: 0; border-radius: 6px; background: #2563eb; color: white; cursor: pointer; font-weight: 700;">Registration</button>
   </form>
 </body>
 </html>
